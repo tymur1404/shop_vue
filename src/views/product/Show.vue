@@ -5,7 +5,7 @@
 export default {
   name: "Index.vue",
   mounted() {
-    $(document).trigger('init')
+    $(document).trigger('changed')
     this.getProduct()
   },
 
@@ -24,7 +24,7 @@ export default {
             this.products = res.data.data;
           })
           .finally( v => {
-            $(document).trigger('init')
+            $(document).trigger('changed')
           })
     }
   }

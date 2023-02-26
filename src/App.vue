@@ -320,7 +320,10 @@
 <script>
 
 export default {
-  name: 'App'
+  name: 'App',
+  mounted() {
+    $(document).trigger('changed')
+  }
 }
 
 </script>
